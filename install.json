@@ -1,4 +1,12 @@
 {
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "body.js"
+      }
+    ]
+  },
   "options": {
     "properties": {
       "apiKey": {
