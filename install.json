@@ -1,0 +1,124 @@
+{
+  "options": {
+    "properties": {
+      "apiKey": {
+        "order": 1,
+        "title": "Pikiz API Key",
+        "description": "Get this from <a class=\"with-inherited-color more\" href=\"https://app.getpikiz.com/apps\">https://app.getpikiz.com/apps</a>",
+        "type": "string",
+        "default": "2d1d802e-67ca-4f91-b484-c5150120ddc3"
+      },
+      "style": {
+        "order": 2,
+        "title": "Button style",
+        "type": "string",
+        "enum": [
+          "orange",
+          "white"
+        ],
+        "enumNames": {
+          "orange": "Orange",
+          "white": "White"
+        },
+        "format": "radios",
+        "default": "orange"
+      },
+      "size": {
+        "order": 3,
+        "title": "Button size",
+        "type": "string",
+        "enum": [
+          "default",
+          "large"
+        ],
+        "enumNames": {
+          "default": "Default",
+          "large": "Large"
+        },
+        "format": "radios",
+        "default": "default"
+      },
+      "language": {
+        "order": 4,
+        "title": "Button language",
+        "type": "string",
+        "enum": [
+          "en",
+          "it"
+        ],
+        "enumNames": {
+          "en": "English",
+          "it": "Italian"
+        },
+        "default": "en"
+      },
+      "auto": {
+        "order": 5,
+        "title": "Apply Pikiz automatically",
+        "description": "Uncheck if you want to manually add Pikiz buttons to specific images on your website. When unchecked, you’ll need to manually add Pikiz buttons to your site with the following HTML code: <pre><code>&lt;pikiz:button data-style=\"orange\" data-size=\"default\" data-url=\"<strong>http://example.com/image/url.png</strong>\" data-target=\"<strong>.css-selector-to img</strong>\" data-language=\"en\"&gt;&lt;/pikiz:button&gt;</code></pre> Learn more on the <a class=\"with-inherited-color with-underline more\" href=\"http://getpikiz.com\">Pikiz website</a>",
+        "type": "boolean",
+        "default": true
+      },
+      "type": {
+        "order": 6,
+        "showIf": {
+          "auto": true
+        },
+        "title": "Types of content to apply Pikiz to",
+        "type": "string",
+        "enum": [
+          "image-and-text",
+          "image",
+          "text"
+        ],
+        "enumNames": {
+          "image-and-text": "Images and text",
+          "image": "Images only",
+          "text": "Text only"
+        },
+        "default": "image-and-text"
+      },
+      "position": {
+        "order": 7,
+        "showIf": {
+          "auto": true,
+          "type": {
+            "op": "!=",
+            "value": "text"
+          }
+        },
+        "title": "Image button position",
+        "description": "Specify the placement of the “Caption this” Pikiz button which overlays images.",
+        "type": "string",
+        "enum": [
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "center"
+        ],
+        "enumNames": {
+          "topLeft": "Top left corner",
+          "topRight": "Top right corner",
+          "bottomLeft": "Bottom left corner",
+          "bottomRight": "Bottom right corner",
+          "center": "Centered"
+        },
+        "default": "topLeft"
+      },
+      "hover": {
+        "order": 8,
+        "showIf": {
+          "auto": true,
+          "type": {
+            "op": "!=",
+            "value": "text"
+          }
+        },
+        "title": "Display image button on hover",
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+}
