@@ -12,7 +12,7 @@
       "apiKey": {
         "order": 1,
         "title": "Pikiz API Key",
-        "description": "Get this from <a class=\"with-inherited-color more\" href=\"https://app.getpikiz.com/apps\">https://app.getpikiz.com/apps</a>",
+        "description": "Get this from the <a class=\"with-inherited-color more\" href=\"https://app.getpikiz.com/onboarding?action=get-eager-api-key\" target=\"_blank\">Pikiz admin</a>",
         "type": "string",
         "default": "2d1d802e-67ca-4f91-b484-c5150120ddc3"
       },
